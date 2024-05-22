@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>노래 익히기</title>
+<title>index4</title>
 <!-- write your code here -->
 <style>
   #animation_container, #_preload_div_ {
@@ -20,9 +20,6 @@
 	left:0;right:0;
 	top:0;bottom:0;
   }
-          	      canvas {
-	-webkit-tap-highlight-color: transparent;
-}
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
@@ -146,7 +143,7 @@ lib.ssMetadata = [];
 					cjs.MovieClip.prototype.play.call(this);
 					this.ignorePause = false;
 				}
-				else if(deltaFrame >= 1){
+				else if(deltaFrame >= 2){
 					this.gotoAndPlayForStreamSoundSync(this.getDesiredFrame(this.currentFrame,calculatedDesiredFrame));
 				}
 				else if(deltaFrame <= -2){
@@ -608,40 +605,20 @@ if (reversed == null) { reversed = false; }
 		var _this = this;
 		/*메뉴 네비게이션*/
 		_this.listen_btn.on('click', function () {
-			//window.open('index.html', '_self');
+			window.open('index.html', '_self');
 			_this.play_btn.visible = true;
-			_this.gotoAndStop(0);
-			var parent = window.parent;
-			if(parent) {
-				parent.swapContent("index1.html");
-			}
 		});
 		_this.expert_btn.on('click', function () {
-			//window.open('index2.html', '_self');
+			window.open('index2.html', '_self');
 			_this.play_btn.visible = true;
-			_this.gotoAndStop(0);
-			var parent = window.parent;
-			if(parent) {
-				parent.swapContent("index2.html");
-			}
 		});
 		_this.singAlong_btn.on('click', function () {
-			//window.open('index3.html', '_self');
+			window.open('index3.html', '_self');
 			_this.play_btn.visible = true;
-			_this.gotoAndStop(0);
-			var parent = window.parent;
-			if(parent) {
-				parent.swapContent("index3.html");
-			}
 		});
 		_this.listen2_btn.on('click', function () {
-			//window.open('index4.html', '_self');
+			window.open('index4.html', '_self');
 			_this.play_btn.visible = true;
-			_this.gotoAndStop(0);
-			var parent = window.parent;
-			if(parent) {
-				parent.swapContent("index4.html");
-			}
 		});
 		/*플레이컨트롤*/
 		_this.play_btn.on('click', function () {
@@ -668,6 +645,7 @@ if (reversed == null) { reversed = false; }
 			_this.gotoAndStop('따라부르');
 			_this.play_btn.visible = true;
 		});
+	}
 	this.frame_20 = function() {
 		var soundInstance = playSound("stos_music",0);
 		this.InsertIntoSoundStreamData(soundInstance,20,1217,1);
@@ -4064,6 +4042,6 @@ function playSound(id, loop, offset) {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1280px; height:800px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:800px; width: 1280px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/preloader.gif style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:800px; width: 1280px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>
