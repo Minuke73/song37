@@ -8,12 +8,13 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
+    html,body {
       position: absolute;
       padding: 0;
       margin: 0;
       width: 100%;
       height: 100%;
+      overflow: hidden;
     }
 
     .wrapper {
@@ -41,7 +42,8 @@
       justify-content: center;
       z-index: 10;
     }
-	              	      canvas {
+	
+              	      canvas {
 	-webkit-tap-highlight-color: transparent;
 }
   </style>
@@ -111,9 +113,9 @@
         function onLoadIframe(trarget) {
           loadedCount++;
           if (loadedCount >= totalCount) {
-            document.body.removeChild(loadingElement);
+           document.body.removeChild(loadingElement);
             // 로딩 끝나고 첫 번째 컨텐츠 노출
-            swapContent(souces[0]);
+           swapContent(souces[0]);
           }
         };
         [].forEach.call(iframeElements, function (el) {
