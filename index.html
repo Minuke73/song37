@@ -8,13 +8,12 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    html,body {
+    body {
       position: absolute;
       padding: 0;
       margin: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden;
     }
 
     .wrapper {
@@ -42,8 +41,7 @@
       justify-content: center;
       z-index: 10;
     }
-	
-              	      canvas {
+	              	      canvas {
 	-webkit-tap-highlight-color: transparent;
 }
   </style>
@@ -99,6 +97,8 @@
           var source = souces[i];
           var iframeElement = document.createElement("iframe");
           iframeElement.setAttribute("frameborder", "no");
+          iframeElement.width="100%";
+          iframeElement.height="100%";
           iframeElement.src = source;
           iframeElements.push(iframeElement);
           wrapper.appendChild(iframeElement);
@@ -113,9 +113,12 @@
         function onLoadIframe(trarget) {
           loadedCount++;
           if (loadedCount >= totalCount) {
-           document.body.removeChild(loadingElement);
+            document.body.removeChild(loadingElement);
             // 로딩 끝나고 첫 번째 컨텐츠 노출
-           swapContent(souces[0]);
+            setTimeout(function(){
+              swapContent(souces[0]);
+            }, 200);
+            
           }
         };
         [].forEach.call(iframeElements, function (el) {
